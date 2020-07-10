@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h1>Meta Data Search Engine Prototype:</h1>
+{% endblock %}
+
+{% block body%}
+<div class='Content'>
+    <div class='form'>
+        <form actions='/' method='POST'>
+            <input type='text' name='search_bar' id='search_bar'>
+            <input type='submit' value='Search'>
+        </form>
+    </div>
+    <table>
+        <tr>
+            <th>File ID</th>
+            <th>Code</th>
+            <th>File Location</th>
+         </tr>
+         {% for result in results %}
+         <tr>
+             <td>{{ result.file_id }}</td>
+             <td>{{ result.code }}</td>
+             <td>{{ result.file_loc }}</td>
+         </tr>
+         {% endfor %}
+    </table>
+</div>
+{% endblock %}

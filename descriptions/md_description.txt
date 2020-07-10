@@ -1,0 +1,3 @@
+MD Molecular Dynamics
+a method that uses Newton's equations of motion to 
+simulate the time evolution of a set of interacting atoms.

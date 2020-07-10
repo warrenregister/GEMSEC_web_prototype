@@ -1,0 +1,3 @@
+NGS Next Generation Sequencing
+Contains many DNA sequences in string format as well as the occurence counts
+for each sequence.
