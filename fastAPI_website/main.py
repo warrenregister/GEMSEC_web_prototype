@@ -1,14 +1,15 @@
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+mport sqlalchemy
 import uvicorn
 
 app = FastAPI(debug=True)
 
-app.mount("/static", StaticFiles(directory='static'), name="static") # Mount static files, specify directory
+app.mount("./static", StaticFiles(directory='./static'), name="static") # Mount static files, specify directory
 
 
-templates = Jinja2Templates(directory='templates') #Template Directory
+templates = Jinja2Templates(directory='./templates') #Template Directory
 
 
 @app.get("/data/")
